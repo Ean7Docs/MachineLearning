@@ -168,7 +168,7 @@ print(model.predict([[50,44,-12]]))
       templates/
     notebook.ipynb
     ufo-model.pkl
-    ``` 
+    ```
 
    ✅ 请参阅解决方案文件夹以查看已完成的应用程序
 
@@ -241,7 +241,7 @@ print(model.predict([[50,44,-12]]))
     <head>
       <meta charset="UTF-8">
       <title>🛸 UFO Appearance Prediction! 👽</title>
-      <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> 
+      <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}"> 
     </head>
     
     <body>
@@ -251,7 +251,7 @@ print(model.predict([[50,44,-12]]))
     
       <p>According to the number of seconds, latitude and longitude, which country is likely to have reported seeing a UFO?</p>
     
-        <form action="{{ url_for('predict')}}" method="post">
+        <form action="{{url_for('predict')}}" method="post">
         	<input type="number" name="seconds" placeholder="Seconds" required="required" min="0" max="60" />
           <input type="text" name="latitude" placeholder="Latitude" required="required" />
     		  <input type="text" name="longitude" placeholder="Longitude" required="required" />
@@ -259,7 +259,7 @@ print(model.predict([[50,44,-12]]))
         </form>
     
       
-       <p>{{ prediction_text }}</p>
+       <p>{{prediction_text}}</p>
     
      </div>
     </div>
@@ -343,5 +343,4 @@ print(model.predict([[50,44,-12]]))
 ## 任务
 
 [尝试不同的模型](./assignment.zh-cn.md)
-
 
